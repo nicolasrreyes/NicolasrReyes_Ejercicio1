@@ -1,0 +1,80 @@
+package factura_ejercicio;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Date fecha = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		sdf.format(fecha);
+		String printFecha = sdf.format(fecha);
+		
+		Scanner scan = new Scanner(System.in);
+		//comentario
+		
+		String nombre, domicilio;
+		String producto1, producto2;
+		int cant1, cant2;
+		double precioU1, precioU2, Subtotal, total, IVA;
+		
+		
+		System.out.println("Nombre Cliente");
+		nombre = scan.nextLine();
+		System.out.println("Domicilio Cliente");
+		domicilio = scan.nextLine();
+		
+		System.out.println("Producto");
+		producto1 = scan.nextLine();
+		System.out.println("Cantidad");
+		cant1 = scan.nextInt();
+		scan.nextLine();
+		System.out.println("Precio Unitario");
+		precioU1 = scan.nextDouble();
+		
+		
+		System.out.println("Siguiente Producto");
+		producto2 = scan.next();
+		scan.nextLine();
+		System.out.println("Cantidad");
+		cant2 = scan.nextInt();
+		scan.nextLine();
+		System.out.println("Precio Unitario");
+		precioU2 = scan.nextDouble();
+		
+		
+		Subtotal = precioU1 * cant1 + precioU2 * cant2;
+		IVA = Subtotal * 0.21;
+		total = IVA + Subtotal;
+		
+		
+		
+		
+		
+		
+		
+		System.out.println("\n********************************************************\n");
+		System.out.println("Fecha " + printFecha );
+		System.out.println("\n********************************************************\n");
+		System.out.println("Nombre: " + nombre);
+		System.out.println("Domicilio: " + domicilio);
+		System.out.println("\n********************************************************\n");
+		System.out.println("Cant.     |    Descripcion  |  P. Unit  |   P. Total ");
+		System.out.println("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ");
+		System.out.println(  cant1 +  "    |    " + producto1 + "   |   " + precioU1 + "   |   " + (cant1 * precioU1) );
+		System.out.println(  cant2 +  "    |    " + producto2 + "   |   " + precioU1 + "   |   " + (cant2 * precioU2) );
+		System.out.println("IVA: " + IVA);
+		System.out.println("Subtotal (sin IVA): " + Subtotal);
+		System.out.println("Total: " + total);
+		System.out.println("*************************************************************************************");
+	
+	
+	
+	}
+
+}
