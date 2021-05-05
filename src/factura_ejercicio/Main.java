@@ -29,22 +29,22 @@ public class Main {
 		System.out.println("Domicilio Cliente");
 		domicilio = scan.nextLine();
 		
-		System.out.println("Producto");
+		System.out.println("Ingrese el Producto");
 		producto1 = scan.nextLine();
-		System.out.println("Cantidad");
+		System.out.println("Ingrese la Cantidad");
 		cant1 = scan.nextInt();
 		scan.nextLine();
-		System.out.println("Precio Unitario");
+		System.out.println("Ingrese el Precio Unitario");
 		precioU1 = scan.nextDouble();
 		
 		
 		System.out.println("Siguiente Producto");
 		producto2 = scan.next();
 		scan.nextLine();
-		System.out.println("Cantidad");
+		System.out.println("Ingrese la Cantidad");
 		cant2 = scan.nextInt();
 		scan.nextLine();
-		System.out.println("Precio Unitario");
+		System.out.println("Ingrese el Precio Unitario");
 		precioU2 = scan.nextDouble();
 		
 		
@@ -64,10 +64,10 @@ public class Main {
 		System.out.println("Nombre: " + nombre);
 		System.out.println("Domicilio: " + domicilio);
 		System.out.println("\n********************************************************\n");
-		System.out.println("Cant.     |    Descripcion  |  P. Unit  |   P. Total ");
+		System.out.println("Cant.  \t\t    |    Descripcion  |  P. Unit  |   P. Total ");
 		System.out.println("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ");
-		System.out.println(  cant1 +  "    |    " + producto1 + "   |   " + precioU1 + "   |   " + (cant1 * precioU1) );
-		System.out.println(  cant2 +  "    |    " + producto2 + "   |   " + precioU1 + "   |   " + (cant2 * precioU2) );
+		System.out.println(  cant1 +  " \t\t    |    " + producto1 + "   |   " + precioU1 + "   |   " + (cant1 * precioU1) );
+		System.out.println(  cant2 +  " \t\t    |    " + producto2 + "   |   " + precioU1 + "   |   " + (cant2 * precioU2) );
 		System.out.println("IVA: " + IVA);
 		System.out.println("Subtotal (sin IVA): " + Subtotal);
 		System.out.println("Total: " + total);
