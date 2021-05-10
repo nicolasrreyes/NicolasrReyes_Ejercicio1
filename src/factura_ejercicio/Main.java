@@ -1,5 +1,5 @@
 package factura_ejercicio;
-
+import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -8,27 +8,31 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		
-		
+				
 		Date fecha = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 		sdf.format(fecha);
 		String printFecha = sdf.format(fecha);
 		
 		Scanner scan = new Scanner(System.in);
-		//comentario
 		
 		String nombre, domicilio;
-		String producto1, producto2;
+		String producto1, producto2, siguienteArticulo; 
+		
 		int cant1, cant2;
 		double precioU1, precioU2, Subtotal, total, IVA;
 		
 		
-		System.out.println("Nombre Cliente");
-		nombre = scan.nextLine();
-		System.out.println("Domicilio Cliente");
-		domicilio = scan.nextLine();
 		
+		
+		nombre = solicitarNombreCliente(scan);
+		domicilio = solicitarDomicilio(scan);
+		
+		
+			
+		
+		
+	
 		System.out.println("Ingrese el Producto");
 		producto1 = scan.nextLine();
 		System.out.println("Ingrese la Cantidad");
@@ -76,5 +80,20 @@ public class Main {
 	
 	
 	}
+
+	private static String solicitarDomicilio(Scanner scan) {
+		String domicilio;
+		System.out.println("Domicilio Cliente");
+		domicilio = scan.nextLine();
+		return domicilio;
+	}
+
+	private static String solicitarNombreCliente(Scanner scan) {
+		String nombre;
+		System.out.println("Nombre Cliente");
+		nombre = scan.nextLine();
+		return nombre;
+	}
+	
 
 }
